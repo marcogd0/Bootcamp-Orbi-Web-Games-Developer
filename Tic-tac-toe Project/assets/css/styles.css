@@ -5,7 +5,7 @@ body {
 .square {
     text-align: center;
     width: 50px;
-    background: rgb(96, 245, 238);
+    background: #60f5ee;
     display: inline-block;
     padding: 40px;
     font-size: 60px;
