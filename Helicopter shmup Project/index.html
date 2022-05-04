@@ -1,18 +1,17 @@
-**** index.html ****
-
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Rescue</title>
+<link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 
 <body>
 <div id="container"> <!-- div container !-->
 
-	<div id="gameBackground"> <!-- div gameBackground. Every object goes here !-->
+	<div id="fundoGame"> <!-- div fundoGame. Every game object goes here !-->
 	
-		<div id="start"><h1> Rescue </h1>
+		<div id="inicio" onclick="start()"><h1> Rescue </h1>
 		<p>Use W key to move the helicopter up, S to move downa and D to shoot.</p>
 		<p> Click here to start!! </p>
 		</div>
@@ -20,5 +19,7 @@
     </div>
 	
 </div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
 </body>
 </html>
