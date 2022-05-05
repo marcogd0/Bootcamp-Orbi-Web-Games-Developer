@@ -14,6 +14,9 @@ function start() { // Inicio da função start()
     S: 83,
     D: 68
     }
+    var velocidade_inimigo1 = 5;
+    var velocidade_inimigo2 = 3;
+    var posicaoY = parseInt(Math.random() * 334); // Number between 0 - 334
     
     jogo.pressionou = [];
 
@@ -35,12 +38,13 @@ function start() { // Inicio da função start()
 	
 	movefundo();
     movejogador();
+    moveinimigo1();
+    moveinimigo2();
 	
 	} // Fim da função loop()
 
     //Função que movimenta o fundo do jogo	
-	function movefundo() {
-	
+	function movefundo() {	
         esquerda = parseInt($("#fundoGame").css("background-position"));
         $("#fundoGame").css("background-position",esquerda-1);
         
@@ -71,5 +75,26 @@ function start() { // Inicio da função start()
             //Chama função Disparo	
         }
     } // fim da função movejogador()
+
+    function moveinimigo1() {
+        posicaoX = parseInt($("#inimigo1").css("left"));
+        $("#inimigo1").css("left",posicaoX-velocidade_inimigo1);
+        $("#inimigo1").css("top",posicaoY);
+            
+        if (posicaoX<=0) {
+            posicaoY = parseInt(Math.random() * 334);
+            $("#inimigo1").css("left",694);
+            $("#inimigo1").css("top",posicaoY);
+        }
+    } //Fim da função moveinimigo1()
+
+    function moveinimigo2() {
+        posicaoX = parseInt($("#inimigo2").css("left"));
+        $("#inimigo2").css("left", posicaoX-velocidade_inimigo2);
+
+        if (posicaoX <= 0) {
+            $("#inimigo2").css("left", 775);
+        }
+    }
 
 } // Fim da função start
